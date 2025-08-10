@@ -484,12 +484,19 @@ rule-providers:
     type: http
 
 rules:
+  # Gemini AI 专用规则 - 确保通过代理访问
+  - "DOMAIN-SUFFIX,gemini.google.com,🚀 节点选择"
+  - "DOMAIN-SUFFIX,bard.google.com,🚀 节点选择"
+  - "DOMAIN-SUFFIX,ai.google.dev,🚀 节点选择"
+  - "DOMAIN-SUFFIX,generativelanguage.googleapis.com,🚀 节点选择"
+  - "DOMAIN-SUFFIX,makersuite.google.com,🚀 节点选择"
+  - "DOMAIN-KEYWORD,gemini,🚀 节点选择"
   - "RULE-SET,LocalAreaNetwork,🎯 全球直连"
   - "RULE-SET,UnBan,🎯 全球直连"
   - "RULE-SET,BanAD,🛑 广告拦截"
   - "RULE-SET,BanProgramAD,🍃 应用净化"
   - "RULE-SET,GoogleFCM,📢 谷歌FCM"
-  - "RULE-SET,GoogleCN,🎯 全球直连"
+  - "RULE-SET,GoogleCN,🚀 节点选择"
   - "RULE-SET,SteamCN,🎯 全球直连"
   - "RULE-SET,Bing,Ⓜ️ 微软Bing"
   - "RULE-SET,OneDrive,Ⓜ️ 微软云盘"
