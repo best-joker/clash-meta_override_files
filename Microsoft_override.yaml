@@ -110,7 +110,7 @@ proxy-groups:
   - name: 📢 谷歌FCM
     type: select
     proxies:
-      - DIRECT
+      - DIRECT  # 优先直连，确保推送通知及时性
       - 🚀 节点选择
       - 🇺🇲 美国节点
       - 🇭🇰 香港节点
@@ -495,7 +495,7 @@ rules:
   - "RULE-SET,UnBan,🎯 全球直连"
   - "RULE-SET,BanAD,🛑 广告拦截"
   - "RULE-SET,BanProgramAD,🍃 应用净化"
-  - "RULE-SET,GoogleFCM,📢 谷歌FCM"
+  - "RULE-SET,GoogleFCM,📢 谷歌FCM"  # Firebase Cloud Messaging 推送服务直连
   - "RULE-SET,GoogleCN,🚀 节点选择"
   - "RULE-SET,SteamCN,🎯 全球直连"
   - "RULE-SET,Bing,Ⓜ️ 微软Bing"
