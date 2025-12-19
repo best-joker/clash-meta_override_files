@@ -137,6 +137,12 @@ proxy-groups:
   #     - 🇯🇵 日本节点
   #     - 🇰🇷 韩国节点
   #     - 🚀 手动切换
+  - name: 🎮 Steam 专用
+    type: url-test
+    include-all: true
+    filter: (?i)^(?!.*(港|HK|Hong Kong|HongKong)).*
+    interval: 300
+    tolerance: 50
   - name: Ⓜ️ 微软Bing
     type: select
     proxies:
@@ -490,6 +496,12 @@ rule-providers:
     type: http
 
 rules:
+  - "DOMAIN-SUFFIX,steampowered.com,🎮 Steam 专用"
+  - "DOMAIN-SUFFIX,steamcommunity.com,🎮 Steam 专用"
+  - "DOMAIN-SUFFIX,steamstatic.com,🎮 Steam 专用"
+  - "DOMAIN-SUFFIX,steamcontent.com,🎮 Steam 专用"
+  - "DOMAIN-SUFFIX,steamgames.com,🎮 Steam 专用"
+  - "DOMAIN-KEYWORD,steam,🎮 游戏平台"
   - "DOMAIN-SUFFIX,gemini.google.com,🤖 Gemini 专用"
   - "DOMAIN-SUFFIX,bard.google.com,🤖 Gemini 专用"
   - "DOMAIN-SUFFIX,ai.google.dev,🤖 Gemini 专用"
@@ -500,7 +512,7 @@ rules:
   - "RULE-SET,UnBan,🎯 全球直连"
   - "RULE-SET,BanAD,🛑 广告拦截"
   - "RULE-SET,BanProgramAD,🍃 应用净化"
-  - "RULE-SET,GoogleFCM,📢 谷歌FCM"  # Firebase Cloud Messaging 推送服务直连
+  - "RULE-SET,GoogleFCM,📢 谷歌FCM"
   - "RULE-SET,GoogleCN,🚀 节点选择"
   - "RULE-SET,SteamCN,🎯 全球直连"
   - "RULE-SET,Bing,Ⓜ️ 微软Bing"
